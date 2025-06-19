@@ -50,5 +50,8 @@ app.post('/register', async (req, res) => {
     res.status(500).json({ message: 'Błąd rejestracji' });
   }
 });
-
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Serwer działa na porcie ${port}`);
+});
 
